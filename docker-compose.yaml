@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:17
+    container_name: lab4-prova
+    environment:
+      POSTGRES_USER: spring
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: springlab420252
+    ports:
+      - "5432:5432"
+    volumes:
+        - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
